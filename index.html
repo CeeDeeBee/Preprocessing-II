@@ -101,6 +101,41 @@
         <div class="btn">Sign Me Up!</div>
       </div>
     </section>
+
+    <section class="content-form">
+      <h2>Want More Information?</h2>
+
+      <p>Fill out the form below and Fun Bus will contact you about the selected package.</p>
+
+      <label class="select-package-label" for="package-select">Select Package:</label>
+      <select name="package" id="package-select" form="contact-form">
+        <option value="fun-sun">Fun In The Sun</option>
+        <option value="mountain">Mountain Excursion</option>
+        <option value="island">Island Getaway</option>
+      </select>
+
+      <form action="#" id="contact-form">
+        <div class="form-input">
+          <div class="form-middle">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Name">
+            <br>
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Email">
+            <br>
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" placeholder="Phone Number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+          </div>
+
+          <div class="form-middle">
+            <label for="info">Additional Information or Questions</label>
+            <textarea name="info" id="info" rows="4" placeholder="Additional Information or Questions"></textarea>
+          </div>
+        </div>
+
+        <input class="form-submit-button" type="submit" value="Submit">
+      </form>
+    </section>
   </div><!-- container -->
 
   <footer class="footer">

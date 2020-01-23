@@ -92,6 +92,7 @@
   .content-pick {
     padding-top: 30px;
     border-top: 2px dashed @navigation-border;
+    border-bottom: 2px dashed @navigation-border;
     .flex(@justify: space-between);
 
     @media @mobile {
@@ -111,6 +112,82 @@
 
         @media @mobile {
           width: 100%;
+        }
+      }
+    }
+  }
+
+  .content-form {
+    margin: 30px 0;
+    .flex();
+    flex-direction: column;
+    text-align: center;
+
+    .select-package-label {
+      font-size: 1.6rem;
+      margin-bottom: 1%;
+    }
+
+    select {
+      font-size: 1.6rem;
+      width: 25%;
+
+      @media @mobile {
+        width: 50%;
+      }
+    }
+
+    form {
+      width: 100%;
+      .flex(@justify: space-around);
+      flex-direction: column;
+
+      .form-input {
+        .flex();
+        width: 100%;
+
+        @media @mobile {
+          flex-direction: column;
+        }
+
+        .form-middle {
+          width: 50%;
+          text-align: center;
+
+          @media @mobile {
+            width: 100%;
+          }
+
+          input {
+            width: 75%;
+            margin: 4% 0;
+            padding: 4%;
+            font-size: 1.6rem;
+          }
+
+          textarea {
+            width: 75%;
+            height: 26vh;
+            padding: 4%;
+            font-size: 1.6rem;
+
+            @media @mobile {
+              margin: 4% 0;
+            }
+          }
+        }
+      }
+
+      label {
+        display: none;
+      }
+
+      .form-submit-button {
+        .button(@width: 25%);
+        padding: 1% 0;
+
+        @media @mobile {
+          width: 50%;
         }
       }
     }

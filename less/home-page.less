@@ -1,3 +1,23 @@
+.header-section {
+  border-bottom: 2px dashed @navigation-border;
+
+  img {
+    margin-bottom: 2%;
+
+    @media @mobile {
+      margin-bottom: 4%;
+    }
+  }
+
+  p {
+    margin-bottom: 1%;
+
+    @media @mobile {
+      margin-bottom: 2%;
+    }
+  }
+}
+
 .home {
 
   .content-section {
@@ -6,19 +26,33 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
-    
+    @media @mobile {
+      flex-direction: column;
+    }
+
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @mobile {
+        width: 100%;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
 
+      @media @mobile {
+        width: 100%;
+      }
+
       img {
         border-radius: 10px;
+
+        @media @mobile {
+          width: 100%;
+        }
       }
     }
   }
@@ -26,6 +60,10 @@
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+
+    @media @mobile {
+      flex-direction: column-reverse;
+    }
 
     .text-content {
       padding-left: 1%;
@@ -42,6 +80,10 @@
     width: 75%;
     margin: 0 auto 30px;
 
+    @media @mobile {
+      width: 100%;
+    }
+
     img {
       border-radius: 10px;
     }
@@ -50,12 +92,106 @@
   .content-pick {
     padding-top: 30px;
     border-top: 2px dashed @navigation-border;
-    display: flex;
-    justify-content: space-between;
+    border-bottom: 2px dashed @navigation-border;
+    .flex(@justify: space-between);
+
+    @media @mobile {
+      flex-direction: column;
+    }
 
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      @media @mobile {
+        width: 80%;
+      }
+
+      .btn {
+        .button();
+
+        @media @mobile {
+          width: 100%;
+        }
+      }
     }
   }
-}// home
+
+  .content-form {
+    margin: 30px 0;
+    .flex();
+    flex-direction: column;
+    text-align: center;
+
+    .select-package-label {
+      font-size: 1.6rem;
+      margin-bottom: 1%;
+    }
+
+    select {
+      font-size: 1.6rem;
+      width: 25%;
+
+      @media @mobile {
+        width: 50%;
+      }
+    }
+
+    form {
+      width: 100%;
+      .flex(@justify: space-around);
+      flex-direction: column;
+
+      .form-input {
+        .flex();
+        width: 100%;
+
+        @media @mobile {
+          flex-direction: column;
+        }
+
+        .form-middle {
+          width: 50%;
+          text-align: center;
+
+          @media @mobile {
+            width: 100%;
+          }
+
+          input {
+            width: 75%;
+            margin: 4% 0;
+            padding: 4%;
+            font-size: 1.6rem;
+          }
+
+          textarea {
+            width: 75%;
+            height: 26vh;
+            padding: 4%;
+            font-size: 1.6rem;
+
+            @media @mobile {
+              margin: 4% 0;
+            }
+          }
+        }
+      }
+
+      label {
+        display: none;
+      }
+
+      .form-submit-button {
+        .button(@width: 25%);
+        padding: 1% 0;
+
+        @media @mobile {
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+
+// home
